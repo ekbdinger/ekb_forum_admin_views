@@ -11,10 +11,9 @@ function ekb_forum_admin_views_views_default_views() {
   $view->name = 'all_forum_posts';
   $view->description = 'All Forum Posts';
   $view->tag = 'forum,';
-  $view->view_php = '';
   $view->base_table = 'node';
-  $view->is_cacheable = FALSE;
-  $view->api_version = 2;
+  $view->core = 0;
+  $view->api_version = '2';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
   $handler = $view->new_display('default', 'Defaults', 'default');
   $handler->override_option('fields', array(
@@ -243,10 +242,10 @@ function ekb_forum_admin_views_views_default_views() {
   $handler->override_option('access', array(
     'type' => 'role',
     'role' => array(
-      '3' => 3,
-      '14' => 14,
-      '15' => 15,
-      '5' => 5,
+      3 => 3,
+      14 => 14,
+      15 => 15,
+      5 => 5,
     ),
   ));
   $handler->override_option('cache', array(
@@ -304,13 +303,14 @@ function ekb_forum_admin_views_views_default_views() {
     'title' => '',
     'description' => '',
     'weight' => 0,
-    'name' => 'navigation',
+    'name' => 'primary-links',
   ));
   $handler->override_option('tab_options', array(
     'type' => 'none',
     'title' => '',
     'description' => '',
     'weight' => 0,
+    'name' => 'navigation',
   ));
   $handler = $view->new_display('feed', 'Feed', 'feed_1');
   $handler->override_option('sorts', array(
@@ -375,13 +375,14 @@ function ekb_forum_admin_views_views_default_views() {
     'title' => '',
     'description' => '',
     'weight' => 0,
-    'name' => 'navigation',
+    'name' => 'primary-links',
   ));
   $handler->override_option('tab_options', array(
     'type' => 'none',
     'title' => '',
     'description' => '',
     'weight' => 0,
+    'name' => 'navigation',
   ));
   $handler->override_option('displays', array());
   $handler->override_option('sitename_title', 0);
@@ -393,10 +394,9 @@ function ekb_forum_admin_views_views_default_views() {
   $view->name = 'comments_all';
   $view->description = 'All comments, not attched to a forum post';
   $view->tag = 'forum, test';
-  $view->view_php = '';
   $view->base_table = 'comments';
-  $view->is_cacheable = FALSE;
-  $view->api_version = 2;
+  $view->core = 0;
+  $view->api_version = '2';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
   $handler = $view->new_display('default', 'Defaults', 'default');
   $handler->override_option('relationships', array(
@@ -604,7 +604,7 @@ function ekb_forum_admin_views_views_default_views() {
   $handler->override_option('access', array(
     'type' => 'role',
     'role' => array(
-      '3' => 3,
+      3 => 3,
     ),
   ));
   $handler->override_option('cache', array(
